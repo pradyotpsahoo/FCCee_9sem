@@ -1,0 +1,141 @@
+\documentclass[12pt,a4paper]{report}
+\setlength{\oddsidemargin}{0.25in}
+\setlength{\evensidemargin}{0.15in}
+\setlength{\topmargin}{0.1in}
+\setlength{\textwidth}{6.0in}
+\setlength{\textheight}{8.5in}
+\usepackage{amsmath,amssymb}
+\usepackage{graphics}
+\usepackage{lscape,graphicx}
+\usepackage{amsfonts}
+\usepackage{longtable}
+\usepackage{epsfig}
+\usepackage{float}
+\usepackage{rotating}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14.5pt}
+\usepackage[titletoc]{appendix}
+\usepackage[english]{babel}
+\addto{\captionsenglish}{\renewcommand{\bibname}{References}}
+
+\usepackage{titlesec}
+\usepackage{comment}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,
+    filecolor=magenta,      
+    urlcolor=black,
+    % pdftitle={Overleaf Example},
+    % pdfpagemode=FullScreen,
+    }
+
+%for pythia code 
+% \usepackage{minted}
+% %\usepackage{listings}% http://ctan.org/pkg/listings
+% \lstset{
+%   basicstyle=\ttfamily,
+%   mathescape
+% }
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{ballblue}{rgb}{0.13, 0.67, 0.8}
+\definecolor{cinnamon}{rgb}{0.82, 0.41, 0.12}
+\definecolor{darkmagenta}{rgb}{0.55, 0.0, 0.55}
+\definecolor{ferrarired}{rgb}{1.0, 0.11, 0.0}
+\definecolor{mediumorchid}{rgb}{0.73, 0.33, 0.83}
+\definecolor{mediumspringgreen}{rgb}{0.0, 0.98, 0.6}
+\definecolor{orange}{rgb}{1.0, 0.5, 0.0}
+\definecolor{magenta}{rgb}{1.0, 0.0, 1.0}
+\usepackage[colorinlistoftodos]{todonotes}
+%\usepackage[colorlinks,allcolors=black,bookmarks=ture,hypertexnames=true]{hyperref} 
+
+
+% \lstset{frame=tb,
+%   language=C++,
+%   aboveskip=1mm,
+%   belowskip=1mm,
+%   showstringspaces=false,
+%   columns=flexible,
+%   basicstyle={\small\ttfamily},
+%   numbers=none,
+%   numberstyle=\tiny\color{sepia},
+%   keywordstyle=\color{blue},
+%   commentstyle=\color{dkgreen},
+%   stringstyle=\color{mediumorchid},
+%   %stringstyle=\color{International orange},
+%   breaklines=true,
+%   breakatwhitespace=true,
+%   tabsize=1
+% }
+
+
+
+\titlespacing*{\chapter}{0pt}{0pt}{0pt}
+\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{}{10pt}{\Huge}
+
+%\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{
+%\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%  macro for margin change
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+%\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+%\setlength{\listparindent}{\parindent}%
+%\setlength{\itemindent}{\parindent}%
+%\setlength{\parsep}{\parskip}%
+}%
+\item[]}{\end{list}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\include{title}
+\pagenumbering{roman}
+\baselineskip=20pt
+%\include{dedicate}
+%\include{declaration}
+%\include{stat}
+%\include{cert1}
+%\include{acknowledgement}
+%\include{abstract}
+%\clearpage
+
+\fancyfoot{}      % Delete current footer settings
+\pagestyle{fancyplain}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\ #1}{\thechapter\ #1}} % remember chapter title
+\lhead[\fancyplain{}{}]{\fancyplain{}{}}
+\rhead[\fancyplain{}{}]{\fancyplain{}{\em\leftmark }}
+\renewcommand{\headrulewidth}{0.3pt}
+\cfoot{\rm\thepage} % page number
+\baselineskip=12pt
+
+% \tableofcontents
+% \clearpage
+% \listoffigures
+% \clearpage
+% \listoftables 
+% \clearpage
+\pagenumbering{arabic}
+\baselineskip=24pt
+
+%\setlength {\marginparwidth }{2cm}
+
+\include{chap1}
+\include{chap2}
+%\include{chap3}
+\include{chap4}
+\include{chap5}
+\include{chap6}
+\include{chap7}
+\include{reference}
+%\include{app1}
+%}
+\end{document}
